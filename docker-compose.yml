@@ -1,0 +1,62 @@
+version: "3.9"
+
+networks:
+  invoicecash_api:
+    name: invoicecash_api
+
+
+services:
+  invoicecash_api:
+    build: ./backend/
+    platform: linux/amd64
+    volumes:
+      - ./backend:/app:cached
+    networks:
+      - invoicecash_api
+    depends_on:
+      - invoicecash_redis
+  
+  wallets_api:
+    build: ./wallets/
+    platform: linux/amd64
+    volumes:
+      - ./wallets:/wallets:cached
+    networks:
+      - invoicecash_api
+
+  invoicecash_apinginx:
+    container_name: invoicecash_apinginx
+    image: nginx:stable-alpine
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./docker/ssl:/etc/nginx/ssl
+      - ./docker/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - invoicecash_api
+    networks:
+      - invoicecash_api
+
+  # FOR LOCAL DB
+  # invoicecash_apidb:
+  #   image: postgres:alpine
+  #   container_name: invoicecash_apidb
+  #   tty: true
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: serghei
+  #     POSTGRES_DB: invoicecash_api
+  #     POSTGRES_PASSWORD: Sereoja
+  #   networks:
+  #     - invoicecash_api
+
+  invoicecash_redis:
+    container_name: invoicecash_redis
+    image: redis:6.2-alpine
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    networks:
+      - invoicecash_api

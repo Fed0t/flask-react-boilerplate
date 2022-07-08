@@ -1,0 +1,12 @@
+setup
+
+    create .venv
+    install all from requirements.txt
+
+    cd app
+    python setup.py install
+
+start 
+
+    celery -A app.main.worker.celery worker
+    gunicorn -w 2 -b 127.0.0.1:5000 app.main.home:app

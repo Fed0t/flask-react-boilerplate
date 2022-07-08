@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "532b040d-3fb4-4f44-b950-55b19daa314c",
+		"name": "InvoiceCashAggregator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Client",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"type\": \"client\",\r\n        \"attributes\": {\r\n            \"webhook_url\": \"anulat\",\r\n            \"webhook_key\": \"xuoksiud2343\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://invoicecash-api.dev.ro/api/v1/clients/4",
+					"protocol": "https",
+					"host": [
+						"invoicecash-api",
+						"dev",
+						"ro"
+					],
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"type\": \"client\",\r\n        \"attributes\": {\r\n            \"name\": \"FirmaMareCuMMar2e\",\r\n            \"client_type\": 1,\r\n            \"webhook_url\": \"https://41ae-213-233-108-217.ngrok.io/api/v1/webhook-client-1/\",\r\n            \"webhook_key\": \"xuoksiud234\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://invoicecash-api.dev.ro/api/v1/clients",
+					"protocol": "https",
+					"host": [
+						"invoicecash-api",
+						"dev",
+						"ro"
+					],
+					"path": [
+						"api",
+						"v1",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"type\": \"order\",\r\n        \"attributes\": {\r\n            \"buyer_id\": 4, \r\n            \"order_type\": \"good\",\r\n            \"seller_id\": 4,\r\n            \"order_details\": \"nu a venit cu ketchup\"\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://invoicecash-api.dev.ro/api/v1/orders",
+					"protocol": "https",
+					"host": [
+						"invoicecash-api",
+						"dev",
+						"ro"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
