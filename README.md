@@ -1,3 +1,6 @@
+
+# Flask ReactJs Boilerplate Scalable
+
 # Scalable Flask App with Security, RESTful, and SQLAlchemy
 This boilerplate offers a quickstart for building a Python-Flask RESTful API, with built-in support for PostgreSQL, using SQLAlchemy as an ORM. It also makes use of Flask-Security in order to control Users and Roles, as well as Flask-Migrate, to manage database migrations.
 <img src="./sample.png">
