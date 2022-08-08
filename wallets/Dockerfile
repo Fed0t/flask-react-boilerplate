@@ -15,7 +15,7 @@ ENV FLASK_ENV=development
 ADD supervisor.conf /etc/supervisor.conf
 COPY . /wallets
 
-RUN pip install -r requirements.txt
+RUN pip install -r /wallets/requirements.txt
 
 WORKDIR /wallets
 

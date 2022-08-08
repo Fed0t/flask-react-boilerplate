@@ -1,8 +1,8 @@
+from bootstrap import init_app, db
+from jobs import rq
+from redis import Redis
 import sys
 sys.tracebacklimit = 0
-from redis import Redis
-from jobs import rq
-from bootstrap import init_app, db
 
 app = init_app()
 

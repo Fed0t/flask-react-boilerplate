@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "// ---DEFAULT CRA---": "",
-    "start": "CHOKIDAR_USEPOLLING=true react-scripts start",
+    "start": "WATCHPACK_POLLING=true WDS_SOCKET_HOST=127.0.0.1 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "// ---TEMPLATE---": "Scripts will be also in the template",

@@ -1,28 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
 import { ReactComponent as DocumentationIcon } from './assets/documentation-icon.svg';
-import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 
 export function Nav() {
   return (
     <Wrapper>
       <Item
-        href="https://invoicecash-api.dev.ro/api/v1/docs"
+        href="https://gpstrack.dev.ro/api/v1/docs"
         target="_blank"
         title="Documentation Page"
         rel="noopener noreferrer"
       >
         <DocumentationIcon />
         Documentation
-      </Item>
-      <Item
-        href="http://192.168.1.138/fedot/invoicecash_aggregator"
-        target="_blank"
-        title="Github Page"
-        rel="noopener noreferrer"
-      >
-        <GithubIcon />
-        GitLab
       </Item>
     </Wrapper>
   );

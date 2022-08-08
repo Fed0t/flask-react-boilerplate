@@ -9,9 +9,9 @@ export function Masthead() {
   return (
     <Wrapper>
       <Logos />
-      <Title>VBR TypeScript Boilerplate</Title>
+      <Title>REACTJS Boilerplate</Title>
       <Lead>
-        React JS TypeScript Boilerplate by Veelancing Inc.
+        React JS TypeScript Boilerplate by IG Research & Development.
       </Lead>
     </Wrapper>
   );

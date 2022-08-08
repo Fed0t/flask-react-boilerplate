@@ -4,8 +4,8 @@ import styled from 'styled-components/macro';
 export function Logo() {
   return (
     <Wrapper>
-      <Title>Veelancing Flask Reactjs Boilerplate</Title>
-      <Description>ReactJs Typescript</Description>
+      <Title>Flask Reactjs Boilerplate</Title>
+      <Description>GPSTrack Demo</Description>
     </Wrapper>
   );
 }
