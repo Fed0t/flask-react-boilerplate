@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "invoicecash_aggregator"
+name = "flaskreact_boilerplate"
 version = "0.1.0"
 description = ""
 authors = ["Serghei <serghei@oveit.com>"]

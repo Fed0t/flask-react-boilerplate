@@ -1,24 +1,24 @@
 from flasgger import Swagger
 template = {
-  "swagger": "2.0",
-  "info": {
-    "title": "Api Documentation",
-    "description": "API Data",
-    "contact": {
-      "responsibleOrganization": "ME",
-      "responsibleDeveloper": "Me",
-      "email": "serghei@veelancing.io",
-      "url": "invoicecash.com",
+    "swagger": "2.0",
+    "info": {
+        "title": "Api Documentation",
+        "description": "API Data",
+        "contact": {
+            "responsibleOrganization": "ME",
+            "responsibleDeveloper": "Me",
+            "email": "serghei@veelancing.io",
+            "url": "flaskreact-boilerplate.test.com",
+        },
+        "termsOfService": "http://me.com/terms",
+        "version": "0.0.1"
     },
-    "termsOfService": "http://me.com/terms",
-    "version": "0.0.1"
-  },
-  "basePath": "/api/v1/",
-  "schemes": [
-    "http",
-    "https"
-  ],
-  "operationId": "getmyData"
+    "basePath": "/api/v1/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "operationId": "getmyData"
 }
 
 swagger_config = {

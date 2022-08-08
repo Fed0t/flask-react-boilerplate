@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "532b040d-3fb4-4f44-b950-55b19daa314c",
-		"name": "InvoiceCashAggregator",
+		"name": "Flask-React-Boilerplate",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
